@@ -1,0 +1,15 @@
+-- Create the converter database
+CREATE DATABASE IF NOT EXISTS converter;
+
+-- Switch to the converter database
+USE converter;
+
+-- Create coords_data table
+CREATE TABLE IF NOT EXISTS coords_data (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  notes TEXT,
+  lat DECIMAL(10, 8),
+  lng DECIMAL(11, 8),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
